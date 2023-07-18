@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tik Tak Toe - Schwer</title>
+        <meta name="language" content="german">
+        <meta http-equiv="content-language" content="de">
+        <meta name="author" content="Julian Ob.">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <script src="js/javascript.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+    	<table class="ttt">
+            <tbody>
+                <tr>
+                    <td id="a0" role="button" tabindex="0" onclick="los(0)"></td>
+                    <td id="a1" role="button" tabindex="0" onclick="los(1)"></td>
+                    <td id="a2" role="button" tabindex="0" onclick="los(2)"></td>
+                </tr>
+                <tr>
+                    <td id="a3" role="button" tabindex="1" onclick="los(3)"></td>
+                    <td id="a4" role="button" tabindex="1" onclick="los(4)"></td>
+                    <td id="a5" role="button" tabindex="1" onclick="los(5)"></td>
+                </tr>
+                <tr>
+                    <td id="a6" role="button" tabindex="2" onclick="los(6)"></td>
+                    <td id="a7" role="button" tabindex="2" onclick="los(7)"></td>
+                    <td id="a8" role="button" tabindex="2" onclick="los(8)"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="myModal" class="modal nop" style="display: none;">
+            <div class="modal-content">
+                <span class="close" onclick="sp()" style="display: block;"></span>
+                <center>
+                    <h2 id="mote">Winner: X</h2>
+                </center>
+            </div>
+        </div>
+    </body>
+</html>
