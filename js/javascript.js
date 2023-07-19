@@ -102,7 +102,7 @@ random = function() {
 window.onclick = function(event) {
     // check if the click was outside the boxes for inputting the data and close them if it was
     let fou = false;
-    // get element on which the click occured
+    // get element on which the click occurred
     let target = event.target;
     // check if the element or one of its parents has the class "di"
     while (target !== document.documentElement) {
