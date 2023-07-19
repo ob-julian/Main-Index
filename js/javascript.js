@@ -105,19 +105,18 @@ window.onclick = function(event) {
     // get element on which the click occured
     let target = event.target;
     // check if the element or one of its parents has the class "di"
-    while (target != document.body) {
+    while (target !== document.body) {
         if(target.classList[0] === "di"){
             fou = true;
             break;
         }
         target = target.parentElement;
     }
-    
+
     if(!fou){
         document.getElementById("neue1").style.display = "none";
         document.getElementById("neue2").style.display = "none";
         fix1 = fix2 = false;
-        fou = false;
     }
 }
 
