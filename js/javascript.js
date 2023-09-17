@@ -89,7 +89,7 @@ random = function() {
             window.location.href = "https://" + host +"/countdown";
             break;
         case 5:
-            window.location.href = "https://" + host +"/cancer";
+            window.location.href = "https://" + host +"/lol";
             break;
         case 6:
             window.location.href = "https://bit.ly/sljulian";
@@ -121,8 +121,29 @@ window.onclick = function(event) {
 }
 
 function copyToClipboard(text) {
+    // new method for copying to clipboard
     navigator.clipboard.writeText(text)
       .catch((error) => {
         console.error("Could not copy text: ", error);
       });
+}
+
+async function changeLanguage(lang) {
+    // save the language in local storage
+    localStorage.setItem("lang", lang);
+
+    await setLanguage(lang);
+}
+
+function changeMode(mode) {
+    // change between light and dark mode
+    document.body.classList.toggle("light");
+    document.body.classList.toggle("dark");
+
+    // change between modes in iframe
+    document.getElementById("ttt").contentWindow.document.body.classList.toggle("light");
+    document.getElementById("ttt").contentWindow.document.body.classList.toggle("dark");
+
+    // update the local storage to the current mode
+    localStorage.setItem("mode", mode);
 }

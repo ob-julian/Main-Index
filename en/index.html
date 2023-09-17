@@ -1,8 +1,28 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
     <head>
-        <link rel="preload" href="js/language.json" as="fetch" crossorigin="anonymous">
-        <title id="title">Indexierung von Julians Websites</title>
+        <script>
+            // Language Logic
+            // check if language is set in local storage
+            let lang = localStorage.getItem("lang");
+            // if not set, set it to browser default
+            if(lang == null){
+                if (navigator.language.startsWith("de")) {
+                    // browser prefers german
+                    localStorage.setItem("lang", "de");
+                    lang = "de";
+                }
+                else{
+                    // browser prefers english
+                    localStorage.setItem("lang", "en");
+                    lang = "en";
+                }
+            }
+            // switch to appropriate language
+            if(lang == "de")
+                document.location.href = "https://oberhofer.ddns.net/";
+        </script>
+        <title>Indexing of Julian's websites</title>
         <meta name="language" content="german">
         <meta http-equiv="content-language" content="de">
         <meta name="author" content="Julian Ob.">
@@ -28,12 +48,6 @@
         <meta name="theme-color" content="#ffffff">
         <script src="js/javascript.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-
-        <!--Search Engine Stuff-->
-        <meta name="description" content="Indexierung von Julians Websites">
-        <link rel="canonical" href="https://oberhofer.ddns.net/">
-        <meta name="robots" content="index, follow">
-
         <noscript>
             <style>
                 .nop{
@@ -65,8 +79,7 @@
     <body class="light">
 
         <div id="langSelect">
-            <label for="lang" id="lang_inf">Sprache:</label>
-            <select id="lang" onchange="changeLanguage(this.value)">
+            <select onchange="changeLanguage(this.value)">
               <option id="de" value="de">
                 DE
               </option>
@@ -75,10 +88,8 @@
               </option>
             </select>
         </div>
-
         <div id="modeSelect">
-            <label for="mode" id="theme">Mode:</label>
-            <select id="mode" onchange="changeMode(this.value)">
+            <select onchange="changeMode(this.value)">
               <option id="light" value="light">
                 Light
               </option>
@@ -88,11 +99,8 @@
             </select>
         </div>
         <script>
-            // hide the body until everything is loaded, to prevent flickering when changing the language
-            document.body.style.visibility = "hidden";
-
             // Dark / Light Mode Logic
-
+            
             // check if mde is set in local storage
             let mode = localStorage.getItem("mode");
             if(mode == null){
@@ -109,7 +117,7 @@
                 }
             }
             // set mode
-            if(mode === "dark"){
+            if(mode == "dark"){
                 document.body.classList.add("dark");
                 document.body.classList.remove("light");
             }
@@ -129,7 +137,7 @@
                 const ctx = document.createElement("canvas").getContext("2d");
                 ctx.canvas.width = ctx.canvas.height = 1;
                 ctx.fillText("🇬🇧", -4, 4);
-                // If the browser does not support emoji, the flag will be rendered as two letters
+                // If the browser does not support emoji, the flag will be rendered as two letters 
                 return ctx.getImageData(0, 0, 1, 1).data[3] > 0; // Not a transparent pixel
             }
 
@@ -143,8 +151,8 @@
 
 	    <div id="container">
             <div class="card head" contentEditable="true">
-                <h1 id="h1">Willkommen</h1>
-                <h2 id="h2">Hier findest du die meisten Links zu meinen Webseiten</h2>
+                <h1>Welcome</h1>
+                <h2>Here you will find most of the links to my websites</h2>
             </div>
             <div class="card row11 cent">
                 <div>
@@ -157,9 +165,7 @@
                     </div>
                     <div class="text test ">
                         <br>
-                        <span id="other_platforms">
-                            Schau auch auf anderen Plattformen vorbei um meine dortigen öffentlichen Projekte zu sehen:
-                        </span>
+                        Check out other platforms to see my public projects there:
                         <div class="center">
                             <a href="https://bit.ly/jugit">
                                 <span class="span">
@@ -178,21 +184,23 @@
             </div>
 
             <div class="card absatz fullrow">
-                <h3 id="main_proj">Main Projekt:</h3>
+                <h3>Main Projekt:</h3>
             </div>
 
             <div class="card ttt">
                 <div class="tick">
                     <div class="a1">
-                        <h4 id="main_proj_des">
-                            Hier kannst du <a href="https://oberhofer.ddns.net/ttt"><span class="span">Tick Tack Toe</span></a> spielen.
-                        </h4>
+                        <h4>Hier kannst du <a href="https://oberhofer.ddns.net:2001"><span class="span">Tick Tack Toe</span></a> spielen.</h4>
                     </div>
                     <div class="block a2 nos rela">
                         <!--<img id="ttt" src="https://oberhofer.ddns.net:2001/client/ms-icon-310x310.png" alt="Tick Tack Toe Icon" width="310" height="310">-->
-                        <iframe src="ttt-schwer/index.html" width="326px" height="326px" style="border: none;" id="ttt" onload='
+                        <iframe src="ttt-schwer/index.html" width="326px" height="326px" style="border: none;" id="ttt"></iframe>
+                        <noscript class="nop rep">
+                            This mini-game requires JavaScript to work.
+                        </noscript>
+                        <script>
                             // set mode in iframe
-                            if(mode  === "dark"){
+                            if(mode  = "dark"){
                                 document.getElementById("ttt").contentWindow.document.body.classList.add("dark");
                                 document.getElementById("ttt").contentWindow.document.body.classList.remove("light");
                             }
@@ -200,12 +208,9 @@
                                 document.getElementById("ttt").contentWindow.document.body.classList.add("light");
                                 document.getElementById("ttt").contentWindow.document.body.classList.remove("dark");
                             }
-                        '></iframe>
-                        <noscript class="nop rep" id="noscript-mini">
-                            Diese Mini-Spiele benötigen JavaScript um zu funktionieren.
-                        </noscript>
+                        </script>
                     </div>
-                    <div class="a3" id="ttt-descript">
+                    <div class="a3">
                         Spielmodi:
 	                    <ul>
 	                        <li>
@@ -222,7 +227,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="a4" id="ttt-future"><!--text test-->
+                    <div class="a4"><!--text test-->
                         Weiterentwicklungsplan:
                         <ul>
                             <li>
@@ -242,7 +247,7 @@
                     <div class="a5">
                         <div class="center">
                             <a href="https://oberhofer.ddns.net/ttt">
-                                <button class="big-button visit">Jetzt Besuchen</button>
+                                <button class="big-button">Jetzt Besuchen</button>
                             </a>
                         </div>
                     </div>
@@ -250,48 +255,46 @@
             </div>
 
             <div class="card absatz cost">
-                <h3 id="cust_proj">Customizable Websites:</h3>
+                <h3>Customizable Websites:</h3>
             </div>
 
             <div class="card row12">
-                <span id="cust_proj_des_1">
-                    Es gibt einen Anlass, zu dem du jemanden gratulieren willst, aber es soll nicht so eine langweilige Whatsapp Message sein?
-                    <br>
-                    Dann hilft dir diese Webseite weiter!
-                    <br><br>
-                </span>
+                Es gibt einen Anlass, zu dem du jemanden gratulieren willst, aber es soll nicht so eine langweilige Whatsapp Message sein?
+                <br>
+                Dann hilft dir diese Webseite weiter!
+                <br><br>
                 <div class="di" id="di2">
                     <button class="bu nos" onclick="neu1()">
-                        <span class="butxt data">
+                        <span class="butxt">
                             Hier klicken um eigenen Daten einzugeben
                         </span>
-                        <noscript class="nop no_js">
-                            Diese Funktion benötigt JavaScript um zu funktionieren.
+                        <noscript class="nop">
+                                This feature requires JavaScript to work.
                         </noscript>
                     </button>
 
                     <div id="neue1" class="neue">
-                        <label for="alter" class="age">Alter:</label>
+                        <label for="alter">Alter:</label>
                         <input type="number" id="alter" class="in" autocomplete="false">
                         <br><br>
-                        <label for="fur" class="for">Für:</label>
+                        <label for="fur">Für:</label>
                         <input type="text" id="fur" class="in" autocomplete="false">
                         <br><br>
-                        <label for="von" class="from">Von:</label>
+                        <label for="von">Von:</label>
                         <input type="text" id="von" class="in" autocomplete="false">
                         <br><br>
-                        <label for="gw2" class="fem">weiblich</label>
+                        <label for="gw2">weiblich</label>
                         <input type="Radio" id="gw2" name="geschlecht" value="f" autocomplete="false">
                         <br><br>
-                        <label for="gm2" class="mas">männlich</label>
+                        <label for="gm2">männlich</label>
                         <input type="Radio" id="gm2" name="geschlecht" value="m" autocomplete="false">
                         <br><br>
-                        <label for="gd2" class="div">divers</label>
+                        <label for="gd2">divers</label>
                         <input type="Radio" id="gd2" name="geschlecht" value="d" autocomplete="false">
                         <br><br>
-                        <input id="bu1" type="submit" value="Fertig" onclick="but1()">
+                        <input type="submit" value="Fertig" onclick="but1()">
                         <br><br>
-                        <label for="fertig1" onclick="cp1()" class="cp">Kopieren:</label>
+                        <label for="fertig1" onclick="cp1()">Kopieren:</label>
                         <input id="fertig1" class="in">
                         <br>
                     </div>
@@ -300,40 +303,39 @@
 
                 <div class="center">
                     <a href="https://oberhofer.ddns.net/geburtstag">
-                        <button class="big-button visit">Jetzt Besuchen</button>
+                        <button class="big-button">Jetzt Besuchen</button>
                     </a>
                 </div>
             </div>
 
             <div class="card row13">
-                <span id="cust_proj_des_2">
-                    Du willst zu einem bestimmten sich wiederholenden Ereignis herunterzählen (lassen)?
-                    <br>
-                    Dann kann dir diese Website helfen!
-                    <br><br>
-                </span>
+                Du willst zu einem bestimmten sich wiederholenden Ereignis herunterzählen (lassen)?
+                <br>
+                Dann kann dir diese Website helfen!
+                <br><br>
+
                 <div class="di" id="di3">
                     <button class="bu nos" onclick="neu2()">
-                        <span class="butxt data">
+                        <span class="butxt">
                             Hier klicken um eigenen Daten einzugeben
                         </span>
-                        <noscript class="nop no_js">
-                            Diese Funktion benötigt JavaScript um zu funktionieren.
+                        <noscript class="nop">
+                                This feature requires JavaScript to work.
                         </noscript>
                     </button>
                     <div id="neue2" class="neue">
-                        <label for="date" id="date_lang">1. Datum:</label>
+                        <label for="date">1. Datum:</label>
                         <input type="date" id="date" class="in" autocomplete="false">
                         <br><br>
-                        <label for="anlass" id="occa">Anlass:</label>
+                        <label for="anlass">Anlass:</label>
                         <input type="text" id="anlass" class="in" autocomplete="false">
                         <br><br>
-                        <label for="name" id="name_lang">Name:</label>
-                        <input type="text" id="name" class="in for" placeholder="Für" autocomplete="false">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" class="in" placeholder="Für" autocomplete="false">
                         <br><br>
-                        <input type="submit" id="bu2" value="Fertig" onclick="but2()">
+                        <input type="submit" value="Fertig" onclick="but2()">
                         <br><br>
-                        <label for="fertig2" onclick="cp2()" class="cp">Kopieren:</label>
+                        <label for="fertig2" onclick="cp2()">Kopieren:</label>
                         <input id="fertig2" class="in">
                         <br>
                     </div>
@@ -343,68 +345,60 @@
 
                 <div class="center">
                     <a href="https://oberhofer.ddns.net/countdown">
-                        <button class="big-button visit">Jetzt Besuchen</button>
+                        <button class="big-button">Jetzt Besuchen</button>
                     </a>
                 </div>
             </div>
 
             <div class="card absatz oth">
-                <h3 id="other_proj">Other Websites:</h3>
+                <h3>Other Websites:</h3>
             </div>
 
             <div class="card row21">
-                <span id="other_proj_des_1">
-                    Ein (nicht besonders schöner) Simulator für Würfel-Laplace-Experimente.
-                    <br><br>
-                    Einfach minimale und maximale Augenzahl, Anzahl der Würfel und Wiederholungsrate Einstellen. Den Rest macht dein Rechner.
-                    <br><br>
-                </span>
+                Ein (nicht besonders schöner) Simulator für Würfel-Laplace-Experimente.
+                <br><br>
+                Einfach minimale und maximale Augenzahl, Anzahl der Würfel und Wiederholungsrate Einstellen. Den Rest macht dein Rechner.
+                <br><br>
                 <div class="center">
                     <a href="https://oberhofer.ddns.net/random">
-                        <button class="big-button visit">Jetzt Besuchen</button>
+                        <button class="big-button">Jetzt Besuchen</button>
                     </a>
                 </div>
             </div>
 
             <div class="card row22">
-                <span id="other_proj_des_2">
-                    Du willst wissen, was passiert, wenn mir langweilig ist und ich ein paar neue Effekte gefunden hab?
-                    <br><br>
-                    Achtung: Diese Website ist nicht für Personen mit Epilepsie geeignet!
-                    <br><br>
-                    Neugierig?
-                    <br><br>
-                </span>
+                Du willst wissen, was passiert, wenn mir langweilig ist und ich ein paar neue Effekte gefunden hab?
+                <br><br>
+                Achtung: Diese Website ist nicht für Personen mit Epilepsie geeignet!
+                <br><br>
+                Neugierig?
+                <br><br>
                 <div class="center">
                     <a href="https://oberhofer.ddns.net/lol">
-                        <button class="big-button visit">Jetzt Besuchen</button>
+                        <button class="big-button">Jetzt Besuchen</button>
                     </a>
                 </div>
             </div>
 
             <div class="card row23 cent">
-                <span id="other_proj_des_3">
-                    Keine Ahnung welche Website du als erstes Aufrufen möchtest?
-                    <br><br>
-                </span>
+                Keine Ahnung welche Website du als erstes Aufrufen möchtest?
+                <br><br>
                 <div class="center">
                     <button class="big-button nos" onclick="random()">
-                        <span class="butxt" id="rng">
+                        <span class="butxt">
                             RANDOMNESS
                         </span>
-                        <noscript class="nop no_js">
-                            Diese Funktion benötigt JavaScript um zu funktionieren.
+                        <noscript class="nop">
+                                This feature requires JavaScript to work.
                         </noscript>
                     </button>
                 </div>
             </div>
 
             <div class="card absatz row33">
-                <span id="disc">
-                    Hinweis: Hier sind nicht alle meine Webseiten aufgelistet.
-                    <br>
-                    Einige sind zum Beispiel über einen Link im entsprechenden Github Repository zu erreichen.
-                </span>
+                Hinweis: Hier sind nicht alle meine Webseiten aufgelistet.
+                <br>
+                Einige sind zum Beispiel über einen Link im entsprechenden Github Repository zu erreichen.
             </div>
 
 	        <div class="cre center">
@@ -413,83 +407,5 @@
 	            </p>
 	        </div>
 	    </div>
-        <script>
-
-            // All Language container Loaded, time to set the appropriate language
-
-            // check if language is set in local storage
-            let lang = localStorage.getItem("lang");
-
-            // If not set, set it to browser default
-            if(lang == null){
-                if (navigator.language.startsWith("de")) {
-                    // browser prefers german
-                    localStorage.setItem("lang", "de");
-                    lang = "de";
-                }
-                else{
-                    // browser prefers english
-                    localStorage.setItem("lang", "en");
-                    lang = "en";
-                }
-            }
-
-            if(lang === "en"){
-                document.getElementById("en").selected = true;
-            }
-
-            setLanguage(lang);
-
-            async function setLanguage(lang){
-                // get language.json
-                let loadedJson = await (await fetch("js/language.json")).json();
-                let json;
-                if(lang === "de")
-                    json = loadedJson.de;
-                else
-                    json = loadedJson.en;
-
-                // change the text of the elements
-                // for all ids in the json
-                for(let id in json.id) {
-                    // get the element
-                    let element = document.getElementById(id);
-                    // check if the element exists
-                    if(element) {
-                        // change the text of the element
-                        element.innerHTML = json.id[id];
-                    }
-                    else
-                        console.log(id + " does not exist!");
-                }
-                // for all classes in the json
-                for(let className in json.class) {
-                    // get the elements
-                    let elements = document.getElementsByClassName(className);
-                    // check if the elements exist
-                    if(elements) {
-                        // change the text of the elements
-                        for(let i = 0; i < elements.length; i++) {
-                            elements[i].innerHTML = json.class[className];
-                        }
-                    }
-                    else
-                        console.log(className + " does not exist!");
-                }
-                // for all values in the json
-                for(let value in json.value) {
-                    // get the elements
-                    let elements = document.getElementById(value);
-                    // check if the elements exist
-                    if(elements) {
-                        // change the text of the elements
-                        elements.value = json.value[value];
-                    }
-                    else
-                        console.log(value + " does not exist!");
-                }
-                document.body.style.visibility = "visible";
-            }
-        </script>
     </body>
 </html>

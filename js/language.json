@@ -1,0 +1,101 @@
+{
+    "de": {
+        "id": {
+            "title": "Indexierung von Julians Websites",
+            "light": "Hell",
+            "dark": "Dunkel",
+            "h1": "Willkommen",
+            "h2": "Hier findest du die meisten Links zu meinen Webseiten",
+            "other_platforms": "Schau auch auf anderen Plattformen vorbei um meine dortigen öffentlichen Projekte zu sehen:",
+            "main_proj": "Hauptprojekt",
+            "main_proj_des": "Hier kannst du <a href='https://oberhofer.ddns.net:2001'><span class='span'>Tick Tack Toe</span></a> spielen.",
+            "noscript-mini": "Diese Mini-Spiele benötigen JavaScript um zu funktionieren.",
+            "ttt-descript": "Spielmodi:<ul><li>Singleplayer (3 verschieden starke Bots)</li><li>Multiplayer (Lokal, auf dem jeweiligen Gerät)</li><li>Multiplayer (Online, über das Internet, mit Chat)</li><li>Multiplayer Experimental (Lokal, auf dem jeweiligen Gerät und Online)</li></ul>",
+            "ttt-future": "Weiterentwicklungsplan:<ul><li>Anmelde/Register System (Voraussichtlich auch mit Goggle etc. Support)</li><li>Ranking System für Multiplayer</li><li>Achievement System</li><li>...</li></ul>",
+            "cust_proj": "Anpassbare Webseiten:",
+            "cust_proj_des_1": " Es gibt einen Anlass, zu dem du jemanden gratulieren willst, aber es soll nicht so eine langweilige Whatsapp Message sein?<br>Dann hilft dir diese Webseite weiter!<br><br>",
+            "cust_proj_des_2": "Du willst zu einem bestimmten sich wiederholenden Ereignis herunterzählen (lassen)?<br>Dann kann dir diese Website helfen!<br><br>",
+            "date_lang": "1. Datum:",
+            "occa": "Anlass:",
+            "name_lang": "Name:",
+            "other_proj": " Andere Websites:",
+            "other_proj_des_1": "Ein (nicht besonders schöner) Simulator für Würfel-Laplace-Experimente.<br><br>Einfach minimale und maximale Augenzahl, Anzahl der Würfel und Wiederholungsrate Einstellen. Den Rest macht dein Rechner.<br><br>",
+            "other_proj_des_2": "Du willst wissen, was passiert, wenn mir langweilig ist und ich ein paar neue Effekte gefunden hab?<br><br>Achtung: Diese Website ist nicht für Personen mit Epilepsie geeignet!<br><br>Neugierig?<br><br>",
+            "other_proj_des_3": "Keine Ahnung welche Website du als erstes Aufrufen möchtest?<br><br>",
+            "rng": "RANDOMNESS",
+            "disc": "Hinweis: Hier sind nicht alle meine Webseiten aufgelistet.<br>Einige sind zum Beispiel über einen Link im entsprechenden Github Repository zu erreichen.",
+            "create": "Erstellt von Julian Ob.",
+            "lang_inf": "Sprache:",
+            "theme": "Design:"
+
+        },
+        "class": {
+            "visit": "Jetzt Besuchen",
+            "no_js": "Diese Funktion benötigt JavaScript um zu funktionieren.",
+            "data": "Hier klicken um eigenen Daten einzugeben",
+            "age": "Alter",
+            "for": "Für",
+            "from": "Von",
+            "fem": "weiblich",
+            "mas": "männlich",
+            "div": "divers",
+            "cp": "Kopieren:"
+
+        },
+        "value": {
+            "bu1": "Fertig",
+            "bu2": "Fertig"
+        }
+
+
+
+    },
+    "en": {
+        "id": {
+            "title": "Indexing of Julian's websites",
+            "light": "Light",
+            "dark": "Dark",
+            "h1": "Welcome",
+            "h2": "Here you can find most of the links to my websites",
+            "other_platforms": "Check out other platforms to see my public projects there:",
+            "main_proj": "Main Projekt",
+            "main_proj_des": "Here you can play <a href='https://oberhofer.ddns.net:2001'><span class='span'>Tick Tack Toe</span></a>.",
+            "noscript-mini": "This mini game requires JavaScript to work.",
+            "ttt-descript": "Game modes:<ul><li>Singleplayer (3 bots of different strengths)</li><li>Multiplayer (Local, on the device)</li><li>Multiplayer (Online, over the internet, with chat)</li><li>Multiplayer Experimental (Local, on the device and online)</li></ul>",
+            "ttt-future": "Development plan:<ul><li>Login/Register System (Probably with Goggle etc. Support)</li><li>Ranking System for Multiplayer</li><li>Achievement System</li><li>...</li></ul>",
+            "cust_proj": "Customizable Websites:",
+            "cust_proj_des_1": " There is an occasion where you want to congratulate someone, but it shouldn't be such a boring Whatsapp message?<br>Then this website can help you!<br><br>",
+            "cust_proj_des_2": "You want to count down to a certain recurring event?<br>Then this website can help you!<br><br>",
+            "date_lang": "1. Date:",
+            "occa": "Occasion:",
+            "name_lang": "Name:",
+            "other_proj": " Other Websites:",
+            "other_proj_des_1": "A (not very beautiful) simulator for dice-Laplace experiments.<br><br>Simply set minimum and maximum number of eyes, number of dice and repetition rate. The rest is done by your computer.<br><br>",
+            "other_proj_des_2": "You want to know what happens when I'm bored and I've found some new effects?<br><br>Attention: This website is not suitable for people with epilepsy!<br><br>Curious?<br><br>",
+            "other_proj_des_3": "No idea which website you want to visit first?<br><br>",
+            "rng": "RANDOMNESS",
+            "disc": "Note: Not all of my websites are listed here.<br>Some can be reached for example via a link in the corresponding Github repository.",
+            "create": "Created by Julian Ob.",
+            "lang_inf": "Language:",
+            "theme": "Theme:"
+        },
+        "class": {
+            "visit": "Visit now",
+            "no_js": "This function requires JavaScript to work.",
+            "data": "Click here to enter your own data",
+            "age": "Age",
+            "for": "For",
+            "from": "From",
+            "fem": "female",
+            "mas": "masculine",
+            "div": "diverse",
+            "cp": "Copy:"
+        },
+        "value": {
+            "bu1": "Done",
+            "bu2": "Done"
+        }
+
+    }
+
+}

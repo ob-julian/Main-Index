@@ -1,9 +1,10 @@
 body {
 	font-family: 'Nurito', sans-serif;
 	padding: 0;
-	background: #f1f1f1;
+	background: var(--background);
 	margin: 20px;
 	font-size: 20px;
+	color: var(--contrast_color);
 }
 table{
 	margin: 0;
@@ -15,7 +16,7 @@ div{
 div.neue>input {
 	position: absolute;
 	left: 100px;
-	border: 2px solid #ccc !important;
+	border: 2px solid var(--border) !important;
 	border-radius: 8px;
 }
 div.neue>label {
@@ -80,30 +81,30 @@ button.big-button:active::before {
 }
 .neue{
 	display: none;
-	background-color: black;
-	color: white;
+	background-color: var(--input_Box_bg);
+	color: var(--main_color);
 	border-radius: 6px;
 	z-index:10;
 	position:absolute;
 	margin-top:2px;
-	padding:10px;
+	padding:15px 10px;
 	width:calc(100% - 20px);
 	text-align:left;
 }
 .bu {
-	box-shadow: 3px 4px 0 0 #1564ad;
-	background: #79bbff linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	box-shadow: 3px 4px 0 0 var(--blue4);
+	background: var(--blue1) linear-gradient(to bottom, var(--blue1) 5%, var(--blue2) 100%);
 	border-radius: 6px;
-	border: 1px solid #337bc4;
+	border: 1px solid var(--blue3);
 	display: inline-block;
-	color: #ffffff;
+	color: var(--main_color);
 	text-decoration: none;
-	text-shadow: 0 1px 0 #528ecc;
+	text-shadow: 0 1px 0 var(--blue5);
 	outline: 0;
 	font-size: 20px;
 }
 .bu:hover {
-	background: #378de5 linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background: var(--blue2) linear-gradient(to bottom, var(--blue2) 5%, var(--blue1) 100%);
 }
 .bu:active {
 	position: relative;
@@ -127,14 +128,6 @@ button.big-button:active::before {
 .div{
 	display:block;
 }
-:root {
-	--backgroundColor: rgba(246, 241, 209);
-	--colorShadeA: rgb(106, 163, 137);
-	--colorShadeB: rgb(121, 186, 156);
-	--colorShadeC: rgb(150, 232, 195);
-	--colorShadeD: rgb(187, 232, 211);
-	--colorShadeE: rgb(205, 255, 232);
-}
 #create{
 	line-height: 2;
 }
@@ -151,7 +144,7 @@ a{
 	/*width: calc(100vh - 80px);
      height: calc(33vh - 80px);
     */
-	background-color: white;
+	background-color: var(--main_color);
 	padding: 20px;
 	/*margin-top: 20px;
     */
@@ -171,6 +164,22 @@ a{
 	margin: 0 auto;
 }
 
+#modeSelect {
+	left: 30px;
+}
+
+#langSelect {
+	right: 30px;
+}
+
+#langSelect, #modeSelect {
+	z-index: 100;
+	position: absolute;
+	padding: 5px;
+	background-color: var(--background);
+	border-radius: 5px;
+}
+
 @media (min-width:981px){
 	table{
 		text-align:center;
@@ -178,7 +187,7 @@ a{
 	td {
 		width: calc(33vw - 80px);
 		height: calc(33vh - 80px);
-		background-color: white;
+		background-color: var(--main_color);
 		padding: 20px;
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
 	}
@@ -187,7 +196,7 @@ a{
 	}
 	.absatz{
 		height:auto;
-		background-color:honeydew;
+		background-color: var(--accent_color);
 	}
 	#container{
 		display:grid;
@@ -273,6 +282,9 @@ a{
 		grid-column: 4;
 		grid-row: 2;
 	}
+	#langSelect, #modeSelect {
+		top: 25px;
+	}
 }
 @media (max-width:1100px){
 	.a5{
@@ -289,7 +301,7 @@ a{
 	}
 	.absatz{
 		margin-top:40px;
-		background-color:honeydew;
+		background-color: var(--accent_color);
 	}
 	#container{
 		display:grid;
@@ -302,5 +314,67 @@ a{
 	.block{
 		margin-bottom: 20px;
 	}
+	#langSelect, #modeSelect {
+		top: 50px;
+	}
 }
 
+.light{
+	--background: var(--white_bg);
+	--border: var(--white_border);
+	--input_Box_bg: var(--white_input_bg);
+	--main_color: var(--white);
+	--contrast_color: var(--black);
+	--accent_color: var(--white_accent_color);
+	--blue1: var(--white_blue1);
+	--blue2: var(--white_blue2);
+	--blue3: var(--white_blue3);
+	--blue4: var(--white_blue4);
+	--blue5: var(--white_blue5);
+}
+
+.dark{
+	--background: var(--black_bg);
+	--border: var(--black_border);
+	--input_Box_bg: var(--black_input_bg);
+	--main_color: var(--black);
+	--contrast_color: var(--white);
+	--accent_color: var(--black_accent_color);
+	--blue1: var(--black_blue1);
+	--blue2: var(--black_blue2);
+	--blue3: var(--black_blue3);
+	--blue4: var(--black_blue4);
+	--blue5: var(--black_blue5);
+}
+
+:root{
+	--colorShadeA: rgb(106, 163, 137);
+	--colorShadeB: rgb(121, 186, 156);
+	--colorShadeC: rgb(150, 232, 195);
+	--colorShadeD: rgb(187, 232, 211);
+	--colorShadeE: rgb(205, 255, 232);
+
+	--white: white;
+	--white_bg: #f1f1f1;
+	--white_border: #cccccc;
+	--white_input_bg: black;
+	--white_accent_color: honeydew;
+	--white_blue1: #79bbff;
+	--white_blue2: #378de5;
+	--white_blue3: #1f5d9b;
+	--white_blue4: #1564ad;
+	--white_blue5: #528ecc;
+	
+
+	--black: #272727;
+	--black_bg: #1a1a1a;
+	--black_border: #333333;
+	--black_input_bg: white;
+	--black_accent_color: black;
+	--black_blue1: #598abb;
+	--black_blue2: #25619c;
+	--black_blue3: #10304f;
+	--black_blue4: #0d3c68;
+	--black_blue5: #355c83;
+
+}
