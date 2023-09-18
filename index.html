@@ -59,12 +59,16 @@
                 .rela{
                     position: relative;
                 }
+
+                .ns_hide{
+                    display: none;
+                }
             </style>
         </noscript>
     </head>
     <body class="light">
 
-        <div id="langSelect">
+        <div id="langSelect" class="ns_hide">
             <label for="lang" id="lang_inf">Sprache:</label>
             <select id="lang" onchange="changeLanguage(this.value)">
               <option id="de" value="de">
@@ -76,7 +80,7 @@
             </select>
         </div>
 
-        <div id="modeSelect">
+        <div id="modeSelect" class="ns_hide">
             <label for="mode" id="theme">Mode:</label>
             <select id="mode" onchange="changeMode(this.value)">
               <option id="light" value="light">
