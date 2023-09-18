@@ -46,6 +46,9 @@
         "value": {
             "bu1": "Fertig",
             "bu2": "Fertig"
+        },
+        "title": {
+            "ttt" :"Interactives Tic Tac Toe"
         }
 
 
@@ -96,6 +99,9 @@
         "value": {
             "bu1": "Done",
             "bu2": "Done"
+        },
+        "title": {
+            "ttt" :"Interactive Tic Tac Toe"
         }
 
     }

@@ -167,13 +167,14 @@
                         <span id="other_platforms">
                             Schau auch auf anderen Plattformen vorbei um meine dortigen öffentlichen Projekte zu sehen:
                         </span>
+                        <br><br>
                         <div class="center">
                             <a href="https://bit.ly/jugit">
                                 <span class="span">
                                     Github
                                 </span>
                             </a>
-                            <br>
+                            <br><br>
                             <a href="https://bit.ly/sljulian">
                                 <span class="span">
                                     SoloLearn
@@ -192,22 +193,12 @@
                 <div class="tick">
                     <div class="a1">
                         <h4 id="main_proj_des">
-                            Hier kannst du <a href="https://oberhofer.ddns.net/ttt"><span class="span">Tick Tack Toe</span></a> spielen.
+                            Hier kannst du <a href="https://oberhofer.ddns.net/ttt"><span class="span">Tic Tac Toe</span></a> spielen.
                         </h4>
                     </div>
                     <div class="block a2 nos rela">
-                        <!--<img id="ttt" src="https://oberhofer.ddns.net:2001/client/ms-icon-310x310.png" alt="Tick Tack Toe Icon" width="310" height="310">-->
-                        <iframe src="ttt-schwer/index.html" width="326px" height="326px" style="border: none;" id="ttt" onload='
-                            // set mode in iframe
-                            if(mode  === "dark"){
-                                document.getElementById("ttt").contentWindow.document.body.classList.add("dark");
-                                document.getElementById("ttt").contentWindow.document.body.classList.remove("light");
-                            }
-                            else{
-                                document.getElementById("ttt").contentWindow.document.body.classList.add("light");
-                                document.getElementById("ttt").contentWindow.document.body.classList.remove("dark");
-                            }
-                        '></iframe>
+                        <!--<img id="ttt" src="https://oberhofer.ddns.net:2001/client/ms-icon-310x310.png" alt="Tic Tac Toe Icon" width="310" height="310">-->
+                        <iframe src="ttt-schwer/index.html" title="Interactives Tic Tac Toe" width="326px" height="326px" style="border: none;" id="ttt" onload='"dark"===mode?(document.getElementById("ttt").contentWindow.document.body.classList.add("dark"),document.getElementById("ttt").contentWindow.document.body.classList.remove("light")):(document.getElementById("ttt").contentWindow.document.body.classList.add("light"),document.getElementById("ttt").contentWindow.document.body.classList.remove("dark"));'></iframe>
                         <noscript class="nop rep" id="noscript-mini">
                             Diese Mini-Spiele benötigen JavaScript um zu funktionieren.
                         </noscript>
@@ -247,7 +238,7 @@
                         </ul>
                     </div>
                     <div class="a5">
-                        <div class="center">
+                        <div class="center" id="soloButton">
                             <a href="https://oberhofer.ddns.net/ttt">
                                 <button class="big-button visit">Jetzt Besuchen</button>
                             </a>
@@ -445,7 +436,10 @@
                 document.getElementById("en").selected = true;
             }
 
-            setLanguage(lang);
+            setLanguage(lang).then(() => {
+                // show the body
+                document.body.style.visibility = "visible";
+            });
 
             async function setLanguage(lang){
                 // get language.json
@@ -467,7 +461,7 @@
                         element.innerHTML = json.id[id];
                     }
                     else
-                        console.log(id + " does not exist!");
+                        console.log("id:" + id + " does not exist!");
                 }
                 // for all classes in the json
                 for(let className in json.class) {
@@ -481,7 +475,7 @@
                         }
                     }
                     else
-                        console.log(className + " does not exist!");
+                        console.log("class:" + className + " does not exist!");
                 }
                 // for all values in the json
                 for(let value in json.value) {
@@ -493,9 +487,21 @@
                         elements.value = json.value[value];
                     }
                     else
-                        console.log(value + " does not exist!");
+                        console.log("value:" + value + " does not exist!");
                 }
-                document.body.style.visibility = "visible";
+                // for all titles in the json
+                for(let title in json.title) {
+                    // get the elements
+                    let elements = document.getElementById(title);
+                    // check if the elements exist
+                    if(elements) {
+                        // change the text of the elements
+                        elements.title = json.title[title];
+                    }
+                    else
+                        console.log("tiutle:" + title + " does not exist!");
+                }
+
             }
         </script>
     </body>
