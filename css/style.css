@@ -31,14 +31,14 @@ button.big-button {
 	vertical-align: middle;
 	text-decoration: none;
 	font-size: 1.5rem;
-	color:var(--colorShadeA);
+	color:var(--button1);
 	font-weight: 700;
 	font-family: inherit;
 	margin-bottom: 30px;
 	padding: 1em 2em;
-	border: 2px solid var(--colorShadeA);
+	border: 2px solid var(--button1);
 	border-radius: 1em;
-	background: var(--colorShadeE);
+	background: var(--button5);
 	transform-style: preserve-3d;
 	transition: all 175ms cubic-bezier(0, 0, 1, 1);
 }
@@ -51,14 +51,14 @@ button.big-button::before {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: var(--colorShadeC);
+	background: var(--button3);
 	border-radius: inherit;
-	box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+	box-shadow: 0 0 0 2px var(--button2), 0 0.75em 0 0 var(--button1);
 	transform: translate3d(0, 0.75em, -1em);
 	transition: all 175ms cubic-bezier(0, 0, 1, 1);
 }
 button.big-button:hover {
-	background: var(--colorShadeD);
+	background: var(--button4);
 	transform: translate(0, 0.375em);
 }
 button.big-button:hover::before {
@@ -69,7 +69,7 @@ button.big-button:active {
 }
 button.big-button:active::before {
 	transform: translate3d(0, 0, -1em);
-	box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+	box-shadow: 0 0 0 2px var(--button2), 0 0.25em 0 0 var(--button2);
 }
 .span{
 	text-decoration: underline;
@@ -182,6 +182,14 @@ a{
 	padding: 5px;
 	background-color: var(--background);
 	border-radius: 5px;
+}
+
+select{
+	background-color: var(--background);
+	border: 1px solid var(--border);
+	color: var(--contrast_color);
+	border-radius: 5px;
+	padding: 3px;
 }
 
 @media (min-width:981px){
@@ -335,6 +343,12 @@ a{
 	--blue3: var(--white_blue3);
 	--blue4: var(--white_blue4);
 	--blue5: var(--white_blue5);
+
+	--button1: var(--white_button1);
+	--button2: var(--white_button2);
+	--button3: var(--white_button3);
+	--button4: var(--white_button4);
+	--button5: var(--white_button5);
 }
 
 .dark{
@@ -349,15 +363,15 @@ a{
 	--blue3: var(--black_blue3);
 	--blue4: var(--black_blue4);
 	--blue5: var(--black_blue5);
+
+	--button1: var(--black_button1);
+	--button2: var(--black_button2);
+	--button3: var(--black_button3);
+	--button4: var(--black_button4);
+	--button5: var(--black_button5);
 }
 
 :root{
-	--colorShadeA: rgb(106, 163, 137);
-	--colorShadeB: rgb(121, 186, 156);
-	--colorShadeC: rgb(150, 232, 195);
-	--colorShadeD: rgb(187, 232, 211);
-	--colorShadeE: rgb(205, 255, 232);
-
 	--white: white;
 	--white_bg: #f1f1f1;
 	--white_border: #cccccc;
@@ -370,6 +384,7 @@ a{
 	--white_blue5: #528ecc;
 	
 
+
 	--black: #272727;
 	--black_bg: #1a1a1a;
 	--black_border: #333333;
@@ -380,5 +395,18 @@ a{
 	--black_blue3: #10304f;
 	--black_blue4: #0d3c68;
 	--black_blue5: #355c83;
+
+
+	--white_button1: rgb(106, 163, 137);
+	--white_button2: rgb(121, 186, 156);
+	--white_button3: rgb(150, 232, 195);
+	--white_button4: rgb(187, 232, 211);
+	--white_button5: rgb(205, 255, 232);
+
+	--black_button1: rgb(65, 98, 83);
+	--black_button2: rgb(69, 106, 89);
+	--black_button3: rgb(106, 163, 137);
+	--black_button4: rgb(141, 175, 159);
+	--black_button5: rgb(145, 180, 164);
 
 }
