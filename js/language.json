@@ -7,11 +7,11 @@
             "h1": "Willkommen",
             "h2": "Hier findest du die meisten Links zu meinen Webseiten",
             "other_platforms": "Schau auch auf anderen Plattformen vorbei um meine dortigen öffentlichen Projekte zu sehen:",
-            "main_proj": "Hauptprojekt",
-            "main_proj_des": "Hier kannst du <a href='https://oberhofer.ddns.net:2001'><span class='span'>Tick Tack Toe</span></a> spielen.",
+            "main_proj": "Hauptprojekt:",
+            "main_proj_des": "Hier kannst du <a href='https://oberhofer.ddns.net:2001'><span class='span'>Tic Tac Toe</span></a> spielen.",
             "noscript-mini": "Diese Mini-Spiele benötigen JavaScript um zu funktionieren.",
-            "ttt-descript": "Spielmodi:<ul><li>Singleplayer (3 verschieden starke Bots)</li><li>Multiplayer (Lokal, auf dem jeweiligen Gerät)</li><li>Multiplayer (Online, über das Internet, mit Chat)</li><li>Multiplayer Experimental (Lokal, auf dem jeweiligen Gerät und Online)</li></ul>",
-            "ttt-future": "Weiterentwicklungsplan:<ul><li>Anmelde/Register System (Voraussichtlich auch mit Goggle etc. Support)</li><li>Ranking System für Multiplayer</li><li>Achievement System</li><li>...</li></ul>",
+            "ttt-descript": "Spielmodi:<ul><li>Einzelspieler (3 verschieden starke Bots)</li><li>Mehrspieler (Lokal, auf dem jeweiligen Gerät)</li><li>Mehrspieler (Online, über das Internet, mit Chat)</li><li>Mehrspieler Experimental (Lokal, auf dem jeweiligen Gerät und Online)</li></ul>",
+            "ttt-future": "Weiterentwicklungsplan:<ul><li>Anmelde/Register System (Voraussichtlich auch mit Goggle etc. Support)</li><li>Ranking System für Mehrspieler</li><li>Achievement System</li><li>...</li></ul>",
             "cust_proj": "Anpassbare Webseiten:",
             "cust_proj_des_1": " Es gibt einen Anlass, zu dem du jemanden gratulieren willst, aber es soll nicht so eine langweilige Whatsapp Message sein?<br>Dann hilft dir diese Webseite weiter!<br><br>",
             "cust_proj_des_2": "Du willst zu einem bestimmten sich wiederholenden Ereignis herunterzählen (lassen)?<br>Dann kann dir diese Website helfen!<br><br>",
@@ -26,7 +26,8 @@
             "disc": "Hinweis: Hier sind nicht alle meine Webseiten aufgelistet.<br>Einige sind zum Beispiel über einen Link im entsprechenden Github Repository zu erreichen.",
             "create": "Erstellt von Julian Ob.",
             "lang_inf": "Sprache:",
-            "theme": "Design:"
+            "theme": "Design:",
+            "lang_disc": "Hinweis: Um Design oder Sprache zu ändern, wird JavaScript benötigt."
 
         },
         "class": {
@@ -58,8 +59,8 @@
             "h1": "Welcome",
             "h2": "Here you can find most of the links to my websites",
             "other_platforms": "Check out other platforms to see my public projects there:",
-            "main_proj": "Main Projekt",
-            "main_proj_des": "Here you can play <a href='https://oberhofer.ddns.net:2001'><span class='span'>Tick Tack Toe</span></a>.",
+            "main_proj": "Main Projekt:",
+            "main_proj_des": "Here you can play <a href='https://oberhofer.ddns.net:2001'><span class='span'>Tic Tac Toe</span></a>.",
             "noscript-mini": "This mini game requires JavaScript to work.",
             "ttt-descript": "Game modes:<ul><li>Singleplayer (3 bots of different strengths)</li><li>Multiplayer (Local, on the device)</li><li>Multiplayer (Online, over the internet, with chat)</li><li>Multiplayer Experimental (Local, on the device and online)</li></ul>",
             "ttt-future": "Development plan:<ul><li>Login/Register System (Probably with Goggle etc. Support)</li><li>Ranking System for Multiplayer</li><li>Achievement System</li><li>...</li></ul>",
@@ -77,7 +78,8 @@
             "disc": "Note: Not all of my websites are listed here.<br>Some can be reached for example via a link in the corresponding Github repository.",
             "create": "Created by Julian Ob.",
             "lang_inf": "Language:",
-            "theme": "Theme:"
+            "theme": "Theme:",
+            "lang_disc": "Note: To change theme or language, JavaScript is required."
         },
         "class": {
             "visit": "Visit now",
