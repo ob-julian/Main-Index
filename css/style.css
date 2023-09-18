@@ -172,6 +172,10 @@ a{
 	right: 30px;
 }
 
+#online_presence{
+	display: contents;
+}
+
 #langSelect, #modeSelect {
 	z-index: 100;
 	position: absolute;
