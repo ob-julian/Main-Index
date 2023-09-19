@@ -1,7 +1,7 @@
 body {
 	font-family: 'Nurito', sans-serif;
 	padding: 0;
-	background: var(--background);
+	background-color: var(--background);
 	margin: 20px;
 	font-size: 20px;
 	color: var(--contrast_color);
@@ -40,7 +40,6 @@ button.big-button {
 	border-radius: 1em;
 	background: var(--button5);
 	transform-style: preserve-3d;
-	transition: all 175ms cubic-bezier(0, 0, 1, 1);
 }
 button.big-button::before {
 	position: absolute;
@@ -55,7 +54,6 @@ button.big-button::before {
 	border-radius: inherit;
 	box-shadow: 0 0 0 2px var(--button2), 0 0.75em 0 0 var(--button1);
 	transform: translate3d(0, 0.75em, -1em);
-	transition: all 175ms cubic-bezier(0, 0, 1, 1);
 }
 button.big-button:hover {
 	background: var(--button4);

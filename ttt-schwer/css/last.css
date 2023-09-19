@@ -1,0 +1,3 @@
+body, table, td, tr, th {
+    transition: color 50ms ease-in-out, background-color 500ms ease-in-out, border-color 500ms ease-in-out;
+}

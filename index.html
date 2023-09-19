@@ -196,9 +196,21 @@
                             Hier kannst du <a href="https://oberhofer.ddns.net/ttt"><span class="span">Tic Tac Toe</span></a> spielen.
                         </h4>
                     </div>
+                    <script>
+                        function iframeDo(){
+                            if("dark" === mode){
+                                document.getElementById("ttt").contentWindow.document.body.classList.add("dark");
+                                document.getElementById("ttt").contentWindow.document.body.classList.remove("light")
+                            } else {
+                                document.getElementById("ttt").contentWindow.document.body.classList.add("light");
+                                document.getElementById("ttt").contentWindow.document.body.classList.remove("dark");
+                            }
+                            document.getElementById("ttt").contentWindow.document.getElementById("sheet").href = "css/last.css";
+                        }
+                    </script>
                     <div class="block a2 nos rela">
                         <!--<img id="ttt" src="https://oberhofer.ddns.net:2001/client/ms-icon-310x310.png" alt="Tic Tac Toe Icon" width="310" height="310">-->
-                        <iframe src="ttt-schwer/index.html" title="Interactives Tic Tac Toe" width="326px" height="326px" style="border: none;" id="ttt" onload='"dark"===mode?(document.getElementById("ttt").contentWindow.document.body.classList.add("dark"),document.getElementById("ttt").contentWindow.document.body.classList.remove("light")):(document.getElementById("ttt").contentWindow.document.body.classList.add("light"),document.getElementById("ttt").contentWindow.document.body.classList.remove("dark"));'></iframe>
+                        <iframe src="ttt-schwer/index.html" title="Interactives Tic Tac Toe"  loading="lazy" width="326px" height="326px" style="border: none;" id="ttt" onload='iframeDo()'></iframe>
                         <noscript class="nop rep" id="noscript-mini">
                             Diese Mini-Spiele benötigen JavaScript um zu funktionieren.
                         </noscript>
@@ -439,6 +451,9 @@
             setLanguage(lang).then(() => {
                 // show the body
                 document.body.style.visibility = "visible";
+                // enable animations
+                // thx firefox for beening weird
+                document.getElementById("lastStyle").href = "css/last.css";
             });
 
             async function setLanguage(lang){
@@ -504,5 +519,10 @@
 
             }
         </script>
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="css/last.css">
+        </noscript>
+        <link rel="stylesheet" type="text/css" id="lastStyle" href="">
     </body>
 </html>
+
