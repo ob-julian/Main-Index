@@ -305,9 +305,9 @@ select{
 		grid-row: 3;
 	}
 	#soloButton{
-		margin-top: 0px;
+		margin-top: 0;
 	}
-	
+
 }
 @media (max-width:980px){
 	.card{
@@ -387,7 +387,7 @@ select{
 	--white_blue3: #1f5d9b;
 	--white_blue4: #1564ad;
 	--white_blue5: #528ecc;
-	
+
 
 
 	--black: #272727;
