@@ -77,7 +77,7 @@ random = function() {
     let ran = Math.floor((Math.random() * 7) + 1);
     switch (ran) {
         case 1:
-            window.location.href = "https://" + host +":2001";
+            window.location.href = "https://" + host +"/ttt";
             break;
         case 2:
             window.location.href = "https://" + host +"/random";
