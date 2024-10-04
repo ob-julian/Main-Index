@@ -165,13 +165,19 @@
                     <div class="text test ">
                         <br>
                         <span id="other_platforms">
-                            Schau auch auf anderen Plattformen vorbei um meine dortigen öffentlichen Projekte zu sehen:
+                            Ich bin auch auf anderen Plattformen zu finden:
                         </span>
                         <br><br>
                         <div class="center">
                             <a href="https://bit.ly/jugit">
                                 <span class="span">
                                     Github
+                                </span>
+                            </a>
+                            <br><br>
+                            <a href="https://bit.ly/julinked">
+                                <span class="span">
+                                    LinkedIn
                                 </span>
                             </a>
                             <br><br>
@@ -418,9 +424,15 @@
             </div>
 
 	        <div class="cre center">
-	            <p id="create">
+	            <div id="create">
 	                Created by Julian Ob.
-	            </p>
+                </div>
+                |
+                <a href="privacy-policy" id="privacy">
+                    <span class="span">
+                        Privacy Policy
+                    </span>
+                </a>
 	        </div>
 	    </div>
         <script>
@@ -438,7 +450,7 @@
                     lang = "de";
                 }
                 else{
-                    // browser prefers english
+                    // default to english
                     localStorage.setItem("lang", "en");
                     lang = "en";
                 }
@@ -516,6 +528,9 @@
                     else
                         console.log("tiutle:" + title + " does not exist!");
                 }
+
+                // set the site language, so translators stop complaining
+                document.documentElement.lang = lang;
 
             }
         </script>

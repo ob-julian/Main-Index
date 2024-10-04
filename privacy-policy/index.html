@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <link rel="preload" href="js/language.json" as="fetch" crossorigin="anonymous">
+        <title id="title">Privacy Policy</title>
+        <meta name="language" content="german">
+        <meta http-equiv="content-language" content="de">
+        <meta name="author" content="Julian Ob.">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/icon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/icon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+    
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <script src="js/javascript.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+        <!--Search Engine Stuff-->
+        <meta name="description" content="Privacy Policy for Julian Ob.">
+        <link rel="canonical" href="https://oberhofer.ddns.net/privacy-policy">
+        <meta name="robots" content="index, follow">
+
+        <noscript>
+            <style>
+                .nop{
+                    display: none;
+                }
+
+                .nos:hover .nop{
+                    display: block;
+                }
+
+                .nos:hover .butxt{
+                    display: none;
+                }
+
+                .rep{
+                    background-color: gray;
+                    border-radius: 10px;
+                    border: 1px solid black;
+                    position: absolute;
+                    top: 140px;
+                }
+
+                .rela{
+                    position: relative;
+                }
+
+                .ns_hide{
+                    display: none;
+                }
+            </style>
+        </noscript>
+    </head>
+    <body class="light">
+
+        <div id="langSelect" class="ns_hide">
+            <label for="lang" id="lang_inf">Sprache:</label>
+            <select id="lang" onchange="changeLanguage(this.value)">
+              <option id="de" value="de">
+                DE
+              </option>
+              <option id="en" value="en">
+                EN
+              </option>
+            </select>
+        </div>
+
+        <div id="modeSelect" class="ns_hide">
+            <label for="mode" id="theme">Mode:</label>
+            <select id="mode" onchange="changeMode(this.value)">
+              <option id="light" value="light">
+                Light
+              </option>
+              <option id="dark" value="dark">
+                Dark
+              </option>
+            </select>
+        </div>
+        <script>
+            // hide the body until everything is loaded, to prevent flickering when changing the language
+            document.body.style.visibility = "hidden";
+
+            // Dark / Light Mode Logic
+
+            // check if mde is set in local storage
+            let mode = localStorage.getItem("mode");
+            if(mode == null){
+                // if not set, set it to browser default
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    // browser prefers dark mode
+                    localStorage.setItem("mode", "dark");
+                    mode = "dark";
+                }
+                else{
+                    // browser prefers light mode
+                    localStorage.setItem("mode", "light");
+                    mode = "light";
+                }
+            }
+            // set mode
+            if(mode === "dark"){
+                document.body.classList.add("dark");
+                document.body.classList.remove("light");
+            }
+            else{
+                document.body.classList.add("light");
+                document.body.classList.remove("dark");
+            }
+
+            // switch the mode selector to the current mode
+            if (mode === "dark") {
+                document.getElementById("dark").selected = true;
+            }
+
+
+            function supportsEmoji () {
+                // Check if the browser supports emoji by checking if the flag of England can be rendered in a canvas element
+                const ctx = document.createElement("canvas").getContext("2d");
+                ctx.canvas.width = ctx.canvas.height = 1;
+                ctx.fillText("🇬🇧", -4, 4);
+                // If the browser does not support emoji, the flag will be rendered as two letters
+                return ctx.getImageData(0, 0, 1, 1).data[3] > 0; // Not a transparent pixel
+            }
+
+
+            // set the language flags to the emoji flags if the browser supports emoji
+            if (supportsEmoji()) {
+                document.getElementById("de").innerHTML = "🇩🇪";
+                document.getElementById("en").innerHTML = "🇬🇧";
+            }
+        </script>
+
+	    <div id="container">
+            <div class="card head" contentEditable="true">
+                <h1 id="h1">Datenschutzerklärung</h1>
+                <noscript id="lang_disc">
+                    Hinweis: Um Design oder Sprache zu ändern, wird JavaScript benötigt.
+                </noscript>
+            </div>
+
+            <div class="card ttt">
+                <div class="tick">
+                    <div class="a1">
+                        <h1 id="text1">
+                            Unsere Website erfasst keine personenbezogenen Daten. Wir nutzen keine Analyse- oder Tracking-Tools und setzen keine Cookies ein.
+                        </h2>
+                        <h2 id="text2">
+                            Daten wie Sprache und Farbschemman werden ausschließlich auf Ihrem Gerät gespeichert und werden nicht an Dritte weitergegeben.
+                        </h2>
+                        <h2 id="text3">
+                            Hinweis: Da die Website auf einem Oracle-Server gehostet wird, können durch Oracle gegebenenfalls Serverlogdaten wie IP-Adressen zu technischen Zwecken erhoben werden. Auf diese Erhebung haben wir keinen Einfluss. Oracle Ihre Datenschutzrichtlinien finden Sie unter: <a href="https://www.oracle.com/legal/privacy/">https://www.oracle.com/legal/privacy/</a>
+                        </h2>
+                        <h2 id="text4">
+                            Mit der Nutzung unserer Website erklären Sie sich mit der Datenschutzerklärung von Oracle einverstanden.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+	        <div class="cre center">
+	            <div id="create">
+	                Created by Julian Ob.
+                </div>
+                |
+                <a href="privacy-policy" id="privacy">
+                    <span class="span">
+                        Privacy Policy
+                    </span>
+                </a>
+	        </div>
+	    </div>
+        <script>
+
+            // All Language container Loaded, time to set the appropriate language
+
+            // check if language is set in local storage
+            let lang = localStorage.getItem("lang");
+
+            // If not set, set it to browser default
+            if(lang == null){
+                if (navigator.language.startsWith("de")) {
+                    // browser prefers german
+                    localStorage.setItem("lang", "de");
+                    lang = "de";
+                }
+                else{
+                    // default to english
+                    localStorage.setItem("lang", "en");
+                    lang = "en";
+                }
+            }
+
+            if(lang === "en"){
+                document.getElementById("en").selected = true;
+            }
+
+            setLanguage(lang).then(() => {
+                // show the body
+                document.body.style.visibility = "visible";
+                // enable animations
+                // thx firefox for beening weird
+                document.getElementById("lastStyle").href = "css/last.css";
+            });
+
+            async function setLanguage(lang){
+                // get language.json
+                let loadedJson = await (await fetch("js/language.json")).json();
+                let json;
+                if(lang === "de")
+                    json = loadedJson.de;
+                else
+                    json = loadedJson.en;
+
+                // change the text of the elements
+                // for all ids in the json
+                for(let id in json.id) {
+                    // get the element
+                    let element = document.getElementById(id);
+                    // check if the element exists
+                    if(element) {
+                        // change the text of the element
+                        element.innerHTML = json.id[id];
+                    }
+                    else
+                        console.log("id:" + id + " does not exist!");
+                }
+                // for all classes in the json
+                for(let className in json.class) {
+                    // get the elements
+                    let elements = document.getElementsByClassName(className);
+                    // check if the elements exist
+                    if(elements) {
+                        // change the text of the elements
+                        for(let i = 0; i < elements.length; i++) {
+                            elements[i].innerHTML = json.class[className];
+                        }
+                    }
+                    else
+                        console.log("class:" + className + " does not exist!");
+                }
+                // for all values in the json
+                for(let value in json.value) {
+                    // get the elements
+                    let elements = document.getElementById(value);
+                    // check if the elements exist
+                    if(elements) {
+                        // change the text of the elements
+                        elements.value = json.value[value];
+                    }
+                    else
+                        console.log("value:" + value + " does not exist!");
+                }
+                // for all titles in the json
+                for(let title in json.title) {
+                    // get the elements
+                    let elements = document.getElementById(title);
+                    // check if the elements exist
+                    if(elements) {
+                        // change the text of the elements
+                        elements.title = json.title[title];
+                    }
+                    else
+                        console.log("tiutle:" + title + " does not exist!");
+                }
+
+                // set the site language, so translators stop complaining
+                document.documentElement.lang = lang;
+
+            }
+        </script>
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="/css/last.css">
+        </noscript>
+        <link rel="stylesheet" type="text/css" id="lastStyle" href="">
+    </body>
+</html>
+
