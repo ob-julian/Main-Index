@@ -114,8 +114,10 @@ window.onclick = function(event) {
     }
 
     if(!fou){
-        document.getElementById("neue1").style.display = "none";
-        document.getElementById("neue2").style.display = "none";
+        try {
+            document.getElementById("neue1").style.display = "none";
+            document.getElementById("neue2").style.display = "none";
+        } catch {}
         fix1 = fix2 = false;
     }
 }
@@ -141,8 +143,10 @@ function changeMode(mode) {
     document.body.classList.toggle("dark");
 
     // change between modes in iframe
-    document.getElementById("ttt").contentWindow.document.body.classList.toggle("light");
-    document.getElementById("ttt").contentWindow.document.body.classList.toggle("dark");
+    try {
+        document.getElementById("ttt").contentWindow.document.body.classList.toggle("light");
+        document.getElementById("ttt").contentWindow.document.body.classList.toggle("dark");
+    } catch {}
 
     // update the local storage to the current mode
     localStorage.setItem("mode", mode);

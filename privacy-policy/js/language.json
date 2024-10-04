@@ -8,7 +8,8 @@
             "text1": "Unsere Website erfasst keine personenbezogenen Daten. Wir nutzen keine Analyse- oder Tracking-Tools und setzen keine Cookies ein.",
             "text2": "Daten wie Sprache und Farbschemman werden ausschließlich auf Ihrem Gerät gespeichert und werden nicht an Dritte weitergegeben.",
             "text3": "Hinweis: Da die Website auf einem Oracle-Server gehostet wird, können durch Oracle gegebenenfalls Serverlogdaten wie IP-Adressen zu technischen Zwecken erhoben werden. Auf diese Erhebung haben wir keinen Einfluss. Oracle Ihre Datenschutzrichtlinien finden Sie unter: <a href='https://www.oracle.com/legal/privacy/'>https://www.oracle.com/legal/privacy/</a>",
-            "text4": "Mit der Nutzung unserer Website erklären Sie sich mit der Datenschutzerklärung von Oracle einverstanden."
+            "text4": "Mit der Nutzung unserer Website erklären Sie sich mit der Datenschutzerklärung von Oracle einverstanden.",
+            "create": "Erstellt von Julian Ob."
         }
     },
     "en": {
@@ -20,7 +21,8 @@
             "text1": "Our website does not collect personal data. We do not use any analysis or tracking tools and do not use cookies.",
             "text2": "Data such as language and color scheme are stored exclusively on your device and are not passed on to third parties.",
             "text3": "Note: Since the website is hosted on an Oracle server, Oracle may collect server log data such as IP addresses for technical purposes. We have no influence on this collection. Oracle's privacy policy can be found at: <a href='https://www.oracle.com/legal/privacy/'>https://www.oracle.com/legal/privacy/</a>",
-            "text4": "By using our website, you agree to Oracle's privacy policy."
+            "text4": "By using our website, you agree to Oracle's privacy policy.",
+            "create": "Created by Julian Ob."
         }
     }
 
