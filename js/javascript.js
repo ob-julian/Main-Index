@@ -151,3 +151,36 @@ function changeMode(mode) {
     // update the local storage to the current mode
     localStorage.setItem("mode", mode);
 }
+
+function scrollContainer(direction) {
+    const container = document.querySelector(".scroll-content");
+    const currentScroll = container.scrollLeft;
+    const pannelWidth = container.clientWidth / 2 + 5;
+    const theoreticalScroll = currentScroll + direction * pannelWidth;
+    const nextFullScrollInbetween = Math.floor(Math.max(currentScroll, theoreticalScroll) / pannelWidth) * pannelWidth;
+    let scrollAmount = nextFullScrollInbetween - currentScroll;
+    if (scrollAmount < 10 && scrollAmount > -10) {
+        scrollAmount = direction * pannelWidth;
+    }
+    //if near container end, scroll to end
+    const finalScrollPosition = currentScroll + scrollAmount;
+    const scrollMargin = 10;
+    if (finalScrollPosition < scrollMargin) {
+        scrollAmount = -currentScroll;
+    }
+    if (finalScrollPosition > container.scrollWidth - container.clientWidth - scrollMargin) {
+        scrollAmount = container.scrollWidth - container.clientWidth - currentScroll;
+    }
+    container.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+    });
+}
+
+function scrollLeftContent() {
+    scrollContainer(-1);
+}
+
+function scrollRightContent() {
+    scrollContainer(1);
+}
