@@ -74,7 +74,8 @@ function cp2() {
 }
 
 random = function() {
-    let ran = Math.floor((Math.random() * 7) + 1);
+    const amountOfSites = 8;
+    let ran = Math.floor((Math.random() * amountOfSites) + 1);
     switch (ran) {
         case 1:
             window.location.href = "https://" + host +"/ttt";
@@ -96,6 +97,11 @@ random = function() {
             break;
         case 7:
             window.location.href = "https://bit.ly/jugit";
+            break;
+        case 8:
+            window.location.href = "https://bit.ly/julinked";
+        case 9:
+            window.location.href = "https://" + host +"/gameList";
     }
 }
 
