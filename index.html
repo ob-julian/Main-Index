@@ -124,7 +124,6 @@
             let autoThemeSwitchListener = window.matchMedia('(prefers-color-scheme: dark)');
 
             function setMode(preferedMode){
-                console.log(autoThemeSwitchListener);
                 let override = false;
 
                 if (["light", "dark"].includes(preferedMode) === false) {
@@ -141,18 +140,19 @@
                 }
                 try {
                     if(preferedMode === "dark"){
+                        document.getElementById("dark").selected = true;
                         document.body.classList.add("darkMode");
                         document.body.classList.remove("lightMode");
                         document.getElementById("ttt").contentWindow.document.body.classList.add("dark");
                         document.getElementById("ttt").contentWindow.document.body.classList.remove("light");
-                        document.getElementById("dark").selected = true;
                     }
                     else{
+                        document.getElementById("light").selected = true;
                         document.body.classList.add("lightMode");
                         document.body.classList.remove("darkMode");
                         document.getElementById("ttt").contentWindow.document.body.classList.add("light");
                         document.getElementById("ttt").contentWindow.document.body.classList.remove("dark");
-                        document.getElementById("light").selected = true;
+                        
                     }
                 } catch (e) {
                     // at first refresh the iframe is not loaded yet, the iframeDo function will be called when the iframe is loaded and apply the theme
