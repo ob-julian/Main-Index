@@ -102,10 +102,10 @@
         <div id="modeSelect" class="ns_hide">
             <label for="mode" id="theme">Mode:</label>
             <select id="mode" onchange="changeMode(this.value)">
-                <option id="light" value="lightMode">
+                <option id="light" value="light">
                     Light
                 </option>
-                <option id="dark" value="darkMode">
+                <option id="dark" value="dark">
                     Dark
                 </option>
                 <option id="auto" value="auto">
@@ -127,12 +127,12 @@
                 console.log(autoThemeSwitchListener);
                 let override = false;
 
-                if (["lightMode", "darkMode"].includes(preferedMode) === false) {
+                if (["light", "dark"].includes(preferedMode) === false) {
                     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                        preferedMode = "darkMode";
+                        preferedMode = "dark";
                     }
                     else{
-                        preferedMode = "lightMode";
+                        preferedMode = "light";
                     }
                     autoThemeSwitchListener.addEventListener('change', setMode); // we can just pass the setMode function because we need it to be just not the right names in oder to be auto
                     override = true;
@@ -140,7 +140,7 @@
                     autoThemeSwitchListener.removeEventListener('change', setMode);
                 }
                 try {
-                    if(preferedMode === "darkMode"){
+                    if(preferedMode === "dark"){
                         document.body.classList.add("darkMode");
                         document.body.classList.remove("lightMode");
                         document.getElementById("ttt").contentWindow.document.body.classList.add("dark");
@@ -242,7 +242,7 @@
                     </div>
                     <script>
                         function iframeDo(){
-                            if("darkMode" === preferedMode){
+                            if(preferedMode === "dark"){
                                 document.getElementById("ttt").contentWindow.document.body.classList.add("dark");
                                 document.getElementById("ttt").contentWindow.document.body.classList.remove("light")
                             } else {
@@ -263,16 +263,16 @@
                         Spielmodi:
 	                    <ul>
 	                        <li>
-                                    Singleplayer (3 verschieden starke Bots)
+                                Singleplayer (3 verschieden starke Bots)
                             </li>
                             <li>
-                                    Multiplayer (Lokal, auf dem jeweiligen Gerät)
+                                Multiplayer (Lokal, auf dem jeweiligen Gerät)
                             </li>
                             <li>
-                                    Multiplayer (Online, über das Internet, mit Chat)
+                                Multiplayer (Online, über das Internet, mit Chat)
                             </li>
                             <li>
-                                    Multiplayer Experimental (Lokal, auf dem jeweiligen Gerät und Online)
+                                Multiplayer Experimental (Lokal, auf dem jeweiligen Gerät und Online)
                             </li>
                         </ul>
                     </div>
