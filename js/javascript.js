@@ -144,18 +144,10 @@ async function changeLanguage(lang) {
 }
 
 function changeMode(mode) {
-    // change between light and dark mode
-    document.body.classList.toggle("light");
-    document.body.classList.toggle("dark");
-
-    // change between modes in iframe
-    try {
-        document.getElementById("ttt").contentWindow.document.body.classList.toggle("light");
-        document.getElementById("ttt").contentWindow.document.body.classList.toggle("dark");
-    } catch {}
+    setMode(mode);
 
     // update the local storage to the current mode
-    localStorage.setItem("mode", mode);
+    localStorage.setItem("theme", mode);
 }
 
 function scrollContainer(direction) {

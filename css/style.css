@@ -377,7 +377,7 @@ select{
 	}
 }
 
-.light{
+.lightMode{
 	--background: var(--white_bg);
 	--border: var(--white_border);
 	--input_Box_bg: var(--white_input_bg);
@@ -397,7 +397,7 @@ select{
 	--button5: var(--white_button5);
 }
 
-.dark{
+.darkMode{
 	--background: var(--black_bg);
 	--border: var(--black_border);
 	--input_Box_bg: var(--black_input_bg);
