@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /ttt-schwer/
+Disallow: /ttt-old/
