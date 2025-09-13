@@ -1,8 +1,6 @@
 let fix1 = false;
 let fix2 = false;
-// const host = window.location.host;
-// host is a relic from when the site reachable under multiple ddns domains
-const host = "oberhofer.ddns.net";
+const host = window.location.hostname; // Site has multiple domains, so we get the current one
 
 neu1 = function() {
     if (fix1) document.getElementById("neue1").style.display = "none";
