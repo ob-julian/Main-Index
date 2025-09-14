@@ -6,4 +6,4 @@
 
 #### Made with HTML, CSS and JS
 
-[Link to the webpage](https://oberhofer.ddns.net/)
+[Link to the webpage](https://oberflow.dev)
