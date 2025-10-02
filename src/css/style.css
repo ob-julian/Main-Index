@@ -52,15 +52,15 @@ button.big-button::before {
 	bottom: 0;
 	background: var(--button3);
 	border-radius: inherit;
-	box-shadow: 0 0 0 2px var(--button2), 0 0.75em 0 0 var(--button1);
+	/*box-shadow: 0 0 0 2px var(--button2), 0 0.75em 0 0 var(--button1);*/
 	transform: translate3d(0, 0.75em, -1em);
 }
 button.big-button:hover {
 	background: var(--button4);
-	transform: translate(0, 0.375em);
+	transform: translate(0, 0.15em);
 }
 button.big-button:hover::before {
-	transform: translate3d(0, 0.75em, -1em);
+	transform: translate3d(0, 0.6em, -1em);
 }
 button.big-button:active {
 	transform: translate(0em, 0.75em);
@@ -139,17 +139,11 @@ a{
 	text-decoration:none;
 }
 .card {
-	/*width: calc(100vh - 80px);
-     height: calc(33vh - 80px);
-    */
 	background-color: var(--main_color);
 	padding: 20px;
-	/*margin-top: 20px;
-    */
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
 	text-align:center;
-	/*width: calc(100vw - 70px);
-    */
+	border-radius: 15px;
 }
 .cent{
 	display: flex;
@@ -210,6 +204,11 @@ select{
 }
 .social-links a:hover {
 	background: #0d6b5e;
+}
+
+#ttt{
+	border: none;
+	border-radius: 50px;
 }
 
 
@@ -335,6 +334,8 @@ select{
 		flex: 0 0 calc(50% - 5px); /* Zwei Karten sichtbar */
 		box-sizing: border-box;
 		margin-right: 10px;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
 	}
 	.scroll-card:last-child {
 		margin-right: 0;
@@ -397,6 +398,7 @@ select{
 	}
 	.scroll-card {
 		width: -webkit-fill-available;
+		width: -moz-available;
 	}
 }
 
@@ -475,7 +477,7 @@ select{
 	--black_button1: rgb(65, 98, 83);
 	--black_button2: rgb(69, 106, 89);
 	--black_button3: rgb(106, 163, 137);
-	--black_button4: rgb(141, 175, 159);
+	--black_button4: rgb(134, 167, 152);
 	--black_button5: rgb(145, 180, 164);
 
 }
